@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORME — Minimal Sneaker Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#20201e;--muted:#777771;--line:#e8e7e2;--paper:#faf9f6;--card:#f0efeb;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans","Noto Sans Thai",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.announcement{background:#20201e;color:#fff;text-align:center;padding:10px 16px;font-size:11px;letter-spacing:1.8px}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;border-bottom:1px solid var(--line);background:rgba(250,249,246,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}.logo{font-size:23px;font-weight:700;letter-spacing:4px}.navlinks{display:flex;gap:30px}.nav a{color:inherit;text-decoration:none;font-size:12px}.navright{display:flex;align-items:center;gap:18px;font-size:12px}.iconbtn{border:0;background:none;padding:7px;position:relative}.count{position:absolute;top:0;right:-2px;background:#222;color:white;border-radius:50%;font-size:9px;width:15px;height:15px;display:grid;place-items:center}.hero{padding:38px 5.5% 50px}.heroimage{min-height:470px;background:#e9e7e1;position:relative;overflow:hidden;display:flex;align-items:center}.heroimage img{position:absolute;right:0;top:0;width:66%;height:100%;object-fit:cover;object-position:center 57%;mix-blend-mode:multiply}.hero-copy{position:relative;z-index:1;width:47%;padding:7% 0 7% 7%}.eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#6e6d67}.hero h1{font-size:clamp(42px,6.5vw,88px);line-height:.98;letter-spacing:-4px;font-weight:500;margin:24px 0 18px;max-width:500px}.hero p{font-size:13px;line-height:1.8;color:#676760;max-width:300px}.primary{display:inline-flex;align-items:center;gap:26px;background:var(--ink);color:#fff;border:1px solid var(--ink);padding:14px 19px;margin-top:18px;font-size:11px;letter-spacing:.5px;text-decoration:none;transition:.2s}.primary:hover{background:transparent;color:var(--ink)}.arrow{font-size:16px}.benefits{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);border-top:1px solid var(--line);margin:0 5.5%;padding:20px 0}.benefit{text-align:center;font-size:10px;letter-spacing:1px;color:#676760}.benefit strong{display:block;color:var(--ink);font-size:11px;font-weight:600;margin-bottom:5px}.shop{padding:82px 5.5% 90px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:30px}.section-head h2{font-size:clamp(30px,4vw,48px);font-weight:500;letter-spacing:-2px;margin:8px 0 0}.section-head p{color:var(--muted);font-size:12px;margin:0 0 5px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:22px;flex-wrap:wrap}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{background:transparent;border:1px solid #dcdad4;padding:9px 15px;border-radius:30px;font-size:11px;color:#595952;transition:.2s}.filter.active,.filter:hover{background:#222;color:#fff;border-color:#222}.controls{display:flex;gap:10px}.search{width:180px;border:1px solid var(--line);background:transparent;padding:10px 12px;font-size:11px;outline:none}.sort{border:1px solid var(--line);background:transparent;padding:10px;font-size:11px;color:#555}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 18px}.product{min-width:0}.product-photo{background:var(--card);aspect-ratio:1/1.05;position:relative;overflow:hidden;display:grid;place-items:center}.product-photo img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;transition:transform .5s}.product:hover .product-photo img{transform:scale(1.045)}.tag{position:absolute;top:13px;left:13px;background:rgba(250,249,246,.92);padding:7px 9px;font-size:9px;letter-spacing:1px;text-transform:uppercase}.heart{position:absolute;top:9px;right:10px;background:rgba(250,249,246,.9);border:0;border-radius:50%;width:32px;height:32px;font-size:17px}.product-info{display:flex;justify-content:space-between;gap:12px;padding:15px 1px 0}.product-name{font-size:13px;font-weight:600}.product-type{font-size:10px;color:var(--muted);margin-top:5px}.price{font-size:12px;white-space:nowrap}.product-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:13px}.swatches{display:flex;gap:5px}.swatch{height:11px;width:11px;border-radius:50%;border:1px solid #d4d2cc}.add{background:transparent;border:1px solid #d6d4ce;padding:8px 11px;font-size:10px;transition:.2s}.add:hover{background:#222;color:#fff;border-color:#222}.story{margin:0 5.5% 90px;background:#e9e7e1;display:grid;grid-template-columns:1fr 1fr;min-height:330px}.story-image{min-height:330px;overflow:hidden}.story-image img{width:100%;height:100%;object-fit:cover;display:block}.story-copy{padding:10%;display:flex;flex-direction:column;justify-content:center}.story-copy h2{font-size:clamp(28px,3.5vw,45px);line-height:1.05;font-weight:500;letter-spacing:-1.7px;margin:18px 0}.story-copy p{font-size:12px;color:#65645e;line-height:1.9;max-width:330px}.textlink{color:inherit;font-size:11px;text-decoration:none;border-bottom:1px solid #999;width:max-content;padding:8px 0;margin-top:12px}.newsletter{padding:65px 20px;text-align:center;border-top:1px solid var(--line)}.newsletter h2{font-size:32px;font-weight:500;letter-spacing:-1.3px;margin:12px 0}.newsletter p{font-size:12px;color:var(--muted)}.emailrow{display:flex;max-width:390px;margin:24px auto 0;border-bottom:1px solid #8c8b84}.emailrow input{flex:1;border:0;background:transparent;padding:13px 3px;outline:none;font-size:12px}.emailrow button{border:0;background:transparent;font-size:11px;padding:0 6px}.footer{border-top:1px solid var(--line);padding:28px 5.5%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:10px;letter-spacing:.4px}.footer strong{color:var(--ink);letter-spacing:3px}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);background:#222;color:white;padding:13px 20px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:30}.toast.show{opacity:1;transform:translate(-50%,0)}.empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--muted);font-size:13px}
+@media(max-width:760px){.nav{height:64px;padding:0 5%}.navlinks{display:none}.logo{font-size:19px}.hero{padding:20px 4% 30px}.heroimage{min-height:550px;align-items:flex-start}.heroimage img{width:100%;height:58%;top:auto;bottom:0;object-position:center}.hero-copy{width:100%;padding:35px 8%}.hero h1{font-size:55px;letter-spacing:-2.5px;margin:17px 0 10px}.hero p{max-width:260px}.benefits{margin:0 4%;gap:8px}.benefit{font-size:9px;letter-spacing:0}.benefit strong{font-size:10px}.shop{padding:55px 4%}.section-head{align-items:start;flex-direction:column;gap:10px}.toolbar{align-items:flex-start}.controls{width:100%}.search{flex:1;min-width:0}.sort{max-width:145px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 10px}.product-name{font-size:12px}.price{font-size:11px}.product-info{gap:5px}.add{padding:7px 8px}.story{margin:0 4% 55px;grid-template-columns:1fr}.story-image{min-height:230px;height:230px}.story-copy{padding:9%}.newsletter{padding:48px 20px}.newsletter h2{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="announcement">COMPLIMENTARY SHIPPING ON ORDERS OVER ฿3,000</div>
+<header class="nav">
+  <a class="logo" href="#" aria-label="FORME home" style="text-decoration:none;color:inherit">FORME<span style="font-weight:400">.</span></a>
+  <nav class="navlinks"><a href="#shop">SHOP ALL</a><a href="#story">OUR APPROACH</a><a href="#newsletter">JOURNAL</a></nav>
+  <div class="navright"><button class="iconbtn" aria-label="Search" onclick="document.getElementById('search').focus()">⌕</button><button class="iconbtn" aria-label="Shopping bag" onclick="showCart()">BAG <span class="count" id="cartCount">0</span></button></div>
+</header>
+<main>
+<section class="hero">
+  <div class="heroimage">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=85" alt="Minimal sneaker product photography">
+    <div class="hero-copy">
+      <div class="eyebrow">DESIGNED FOR EVERYDAY</div>
+      <h1>Less,<br>but better.</h1>
+      <p>Everyday sneakers made for the spaces between everywhere and nowhere.</p>
+      <a class="primary" href="#shop">EXPLORE COLLECTION <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+<div class="benefits">
+  <div class="benefit"><strong>01 / CONSIDERED DESIGN</strong>Nothing extra, nothing missing</div>
+  <div class="benefit"><strong>02 / EVERYDAY COMFORT</strong>Made to move with you</div>
+  <div class="benefit"><strong>03 / TIMELESS BY NATURE</strong>Wear it your own way</div>
+</div>
+<section class="shop" id="shop">
+  <div class="section-head"><div><div class="eyebrow">THE CURRENT EDIT</div><h2>Selected essentials</h2></div><p id="resultCount">06 pieces · Fall / Winter</p></div>
+  <div class="toolbar">
+    <div class="filters" role="group" aria-label="Filter products">
+      <button class="filter active" data-filter="All">All pieces</button><button class="filter" data-filter="White">White</button><button class="filter" data-filter="Neutral">Neutral</button><button class="filter" data-filter="Black">Black</button>
+    </div>
+    <div class="controls"><input id="search" class="search" type="search" placeholder="Search sneakers..." aria-label="Search sneakers"><select id="sort" class="sort" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</section>
+<section class="story" id="story">
+  <div class="story-image"><img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1100&q=85" alt="Sneakers in a simple everyday setting"></div>
+  <div class="story-copy"><div class="eyebrow">OUR PHILOSOPHY</div><h2>Good design<br>speaks softly.</h2><p>We believe the best things don't need to shout. Thoughtful shapes, honest materials and colors that work with everything.</p><a class="textlink" href="#shop">GET TO KNOW FORME ↗</a></div>
+</section>
+<section class="newsletter" id="newsletter"><div class="eyebrow">A LITTLE NOTE FROM US</div><h2>Stay in the loop.</h2><p>New releases, quiet essentials and good things only.</p><form class="emailrow" onsubmit="event.preventDefault();document.getElementById('toast').textContent='Thanks for joining the list';document.getElementById('toast').classList.add('show');setTimeout(()=>document.getElementById('toast').classList.remove('show'),2200);this.reset()"><input type="email" placeholder="Your email address" required aria-label="Your email address"><button type="submit">SUBSCRIBE ↗</button></form></section>
+</main>
+<footer class="footer"><strong>FORME.</strong><span>DESIGNED WITH INTENTION · BANGKOK</span><span>INSTAGRAM &nbsp;&nbsp; CONTACT &nbsp;&nbsp; SHIPPING & RETURNS</span><span>© 2026 FORME STUDIO</span></footer>
+<div class="toast" id="toast" role="status"></div>
+<audio id="hover-sound" preload="auto" src="data:audio/wav;base64,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P/9E/0//Yf95/5X/tP/W//n/GwA8AFsAdgCMAJ0AqQCuAK0ApgCZAIcAcABWADkAGgD8/97/wf+m/5D/ff9v/2f/ZP9m/27/e/+M/6H/uf/T/+7/CQAjAD0AUwBnAHYAggCIAIoAiACAAHUAZQBTAD0AJwAPAPj/4P/K/7b/pf+Y/47/iP+G/4j/j/+Z/6b/tv/I/9z/8f8FABkALAA+AE0AWQBiAGgAagBpAGQAXABRAEQANQAkABIAAADw/9//z//C/7f/rv+o/6X/pf+o/67/tv/B/83/2//q//n/BwAWACMALwA6AEIASQBMAE4ATABJAEMAOwAxACcAGwAOAAEA9v/q/9//1f/N/8f/wv/A/7//wf/E/8r/0f/Z/+L/7P/2/wAACgAUABwAJAArAC8AMwA1ADUAMwAwACwAJgAgABgAEAAIAAAA+P/x/+r/4//e/9r/1//W/9b/1//Z/93/4f/m/+z/8v/5////BQALABAAFQAZAB0AHwAgACEAIAAfABwAGQAVABEADAAHAAMA///6//b/8v/u/+z/6v/o/+j/6P/p/+r/7P/v//L/9f/5//z/AAACAAUACAALAA0ADwAQABEAEQARABAADwANAAsACQAHAAQAAgAAAP7//P/6//n/9//2//b/9f/1//X/9v/3//j/+f/6//z//f///wAAAQACAAMABAAFAAUABgAGAAYABgAFAAUABAAEAAMAAgABAAEAAAAAAP/////+//7//v/+//7//v/+//7//v/+/////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></audio>
+
+<script>
+const products=[
+{id:1,name:"The Form 01",type:"Clean low-top",price:2890,color:"White",tag:"Bestseller",img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",swatches:["#f6f5f0","#d9d1c4"]},
+{id:2,name:"The Form 02",type:"Everyday runner",price:3290,color:"Neutral",tag:"New arrival",img:"https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=80",swatches:["#c7b7a1","#efeee8"]},
+{id:3,name:"The Form 03",type:"Minimal court",price:2590,color:"White",tag:"",img:"https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80",swatches:["#f7f6f1","#222222"]},
+{id:4,name:"The Form 04",type:"Suede essential",price:3490,color:"Neutral",tag:"Limited",img:"https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80",swatches:["#b7a18a","#d9d3c8"]},
+{id:5,name:"The Form 05",type:"Modern classic",price:2790,color:"Black",tag:"",img:"https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80",swatches:["#222222","#f7f6f1"]},
+{id:6,name:"The Form 06",type:"Daily canvas",price:1990,color:"Black",tag:"Easy wear",img:"https://images.unsplash.com/photo-1520256862855-998b9a34c6b5?auto=format&fit=crop&w=900&q=80",swatches:["#222222","#d4c8b5"]}
+];
+let activeFilter="All",cart=0;
+const money=n=>"฿"+n.toLocaleString("en-US");
+function render(){
+ let list=products.filter(p=>(activeFilter==="All"||p.color===activeFilter)&&(p.name+" "+p.type+" "+p.color).toLowerCase().includes(document.getElementById("search").value.toLowerCase()));
+ const sort=document.getElementById("sort").value;if(sort==="low")list.sort((a,b)=>a.price-b.price);if(sort==="high")list.sort((a,b)=>b.price-a.price);
+ document.getElementById("resultCount").textContent=String(list.length).padStart(2,"0")+" pieces · Fall / Winter";
+ const grid=document.getElementById("productGrid");
+ if(!list.length){grid.innerHTML='<div class="empty">No sneakers found. Try another search.</div>';return}
+ grid.innerHTML=list.map(p=>`<article class="product"><div class="product-photo"><img loading="lazy" src="${p.img}" alt="${p.name} sneaker"><span class="tag" style="${p.tag?'':'display:none'}">${p.tag}</span><button class="heart" aria-label="Save ${p.name}" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button></div><div class="product-info"><div><div class="product-name">${p.name}</div><div class="product-type">${p.type}</div></div><div class="price">${money(p.price)}</div></div><div class="product-bottom"><div class="swatches">${p.swatches.map(c=>`<span class="swatch" style="background:${c}"></span>`).join("")}</div><button class="add" onclick="addToBag('${p.name}')">ADD TO BAG +</button></div></article>`).join("");
+}
+function addToBag(name){cart++;document.getElementById("cartCount").textContent=cart;document.getElementById("toast").textContent=name+" added to bag";document.getElementById("toast").classList.add("show");setTimeout(()=>document.getElementById("toast").classList.remove("show"),2000)}
+function showCart(){document.getElementById("toast").textContent=cart?`Your bag has ${cart} item${cart===1?"":"s"}`:"Your bag is empty";document.getElementById("toast").classList.add("show");setTimeout(()=>document.getElementById("toast").classList.remove("show"),2200)}
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");activeFilter=b.dataset.filter;render()}));
+document.getElementById("search").addEventListener("input",render);document.getElementById("sort").addEventListener("change",render);
+// Subtle hover sound made directly in the browser (no MP3 file needed)
+let hoverAudioContext;
+function playHoverSound() {
+  try {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) return;
+    if (!hoverAudioContext) hoverAudioContext = new AudioContextClass();
+    if (hoverAudioContext.state === "suspended") hoverAudioContext.resume();
+
+    const oscillator = hoverAudioContext.createOscillator();
+    const gain = hoverAudioContext.createGain();
+    const now = hoverAudioContext.currentTime;
+
+    oscillator.type = "sine";
+    oscillator.frequency.setValueAtTime(950, now);
+    oscillator.frequency.exponentialRampToValueAtTime(620, now + 0.045);
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(0.045, now + 0.006);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.055);
+
+    oscillator.connect(gain);
+    gain.connect(hoverAudioContext.destination);
+    oscillator.start(now);
+    oscillator.stop(now + 0.06);
+  } catch (error) {
+    // Keep the store usable even if the browser blocks audio.
+  }
+}
+
+document.querySelectorAll("button, a, .product").forEach((element) => {
+  element.addEventListener("pointerenter", playHoverSound);
+});
+render();
+</script>
+</body>
+</html>
